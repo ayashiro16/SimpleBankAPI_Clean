@@ -1,4 +1,4 @@
-# Simple Bank API V3
+# Simple Bank API Clean 
 
 A simple banking API created for my educational purposes
 
