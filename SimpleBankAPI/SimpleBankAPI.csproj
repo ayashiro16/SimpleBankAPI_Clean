@@ -40,7 +40,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Migrations\" />
+      <Folder Include="API\" />
+      <Folder Include="Infrastructure\" />
+      <Folder Include="UnitTests\" />
     </ItemGroup>
 
 </Project>

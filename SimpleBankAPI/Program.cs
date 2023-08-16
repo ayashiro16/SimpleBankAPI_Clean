@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using SimpleBankAPI.Data;
-using SimpleBankAPI.ExceptionHandlers;
-using SimpleBankAPI.Services;
+using SimpleBankAPI.API.ExceptionHandlers;
+using SimpleBankAPI.Infrastructure.Data;
+using SimpleBankAPI.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
