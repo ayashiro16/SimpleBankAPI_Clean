@@ -137,7 +137,7 @@ public class AccountsService: IAccountsService
         {
             return new Transfer(sender, recipient) switch
             {
-                { Sender: null, Recipient: null } => throw new AccountNotFoundException("sender or recipient"),
+                { Sender: null, Recipient: null } => throw new AccountNotFoundException("sender and recipient"),
                 { Sender: null, Recipient: not null } => throw new AccountNotFoundException("sender"),
                 { Sender: not null, Recipient: null } => throw new AccountNotFoundException("recipient"),
             };
