@@ -1,9 +1,8 @@
 using System.Text;
-using SimpleBankAPI.API.Formatters.Interfaces;
 
 namespace SimpleBankAPI.API.Formatters.CsvFormatters;
 
-public class AccountDto : IFormatter
+public class AccountDto : Interfaces.IFormatter
 {
     public void Format(StringBuilder buffer, object item)
     {

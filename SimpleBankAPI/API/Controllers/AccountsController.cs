@@ -2,10 +2,11 @@ using System.Text.Json;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using SimpleBankAPI.Application.DataTransformationObjects.Requests;
+using SimpleBankAPI.API.RequestModels;
 using SimpleBankAPI.Application.DataTransformationObjects.Responses;
-using SimpleBankAPI.Application.Services.Interfaces;
 using SimpleBankAPI.Domain.Exceptions;
+using GetAccountsQuery = SimpleBankAPI.Application.DataTransformationObjects.Requests.GetAccountsQuery;
+using IAccountsService = SimpleBankAPI.Application.Services.Interfaces.IAccountsService;
 
 namespace SimpleBankAPI.API.Controllers
 {
