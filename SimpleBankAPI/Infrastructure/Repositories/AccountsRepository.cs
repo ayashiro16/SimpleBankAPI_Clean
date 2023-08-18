@@ -2,7 +2,6 @@ using SimpleBankAPI.Domain.Entities;
 using SimpleBankAPI.Domain.Exceptions;
 using GetAccountsQuery = SimpleBankAPI.Application.DataTransformationObjects.Requests.GetAccountsQuery;
 using AccountContext = SimpleBankAPI.Infrastructure.Data.AccountContext;
-using Account = SimpleBankAPI.Domain.Entities.Account;
 
 namespace SimpleBankAPI.Infrastructure.Repositories;
 
@@ -20,7 +19,7 @@ public class AccountsRepository : Domain.Interfaces.IAccountsRepository
         return _context.FindAsync(id);
     }
 
-    public (List<Account>, PaginationMetadata) GetAll(GetAccountsQuery query)
+    public (IEnumerable<Account>, PaginationMetadata) GetAll(GetAccountsQuery query)
     {
         var collection = _context.GetAll();
         if (!string.IsNullOrEmpty(query.FilterTerm))

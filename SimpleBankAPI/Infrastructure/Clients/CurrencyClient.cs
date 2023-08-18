@@ -1,6 +1,6 @@
 using System.Net;
 using Newtonsoft.Json;
-using SimpleBankAPI.Application.Interfaces;
+using ICurrencyRate = SimpleBankAPI.Application.Interfaces.ICurrencyRate;
 
 namespace SimpleBankAPI.Infrastructure.Clients;
 

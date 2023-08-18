@@ -1,6 +1,6 @@
-using SimpleBankAPI.Application.Interfaces;
+using ICurrencyRate = SimpleBankAPI.Application.Interfaces.ICurrencyRate;
 
-namespace SimpleBankAPI.UnitTests;
+namespace SimpleBankAPI.UnitTests.Helpers;
 
 public class FakeCurrencyClient : ICurrencyRate
 {

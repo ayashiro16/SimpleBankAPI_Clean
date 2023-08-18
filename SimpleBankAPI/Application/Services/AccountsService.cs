@@ -1,10 +1,10 @@
-using SimpleBankAPI.Application.DataTransformationObjects.Requests;
 using SimpleBankAPI.Application.DataTransformationObjects.Responses;
 using SimpleBankAPI.Application.Interfaces;
-using SimpleBankAPI.Application.Services.Interfaces;
-using SimpleBankAPI.Application.Validators.Interfaces;
 using SimpleBankAPI.Domain.Exceptions;
-using SimpleBankAPI.Domain.Interfaces;
+using GetAccountsQuery = SimpleBankAPI.Application.DataTransformationObjects.Requests.GetAccountsQuery;
+using IAccountsService = SimpleBankAPI.Application.Services.Interfaces.IAccountsService;
+using IValidator = SimpleBankAPI.Application.Validators.Interfaces.IValidator;
+using IAccountsRepository = SimpleBankAPI.Domain.Interfaces.IAccountsRepository;
 using Account = SimpleBankAPI.Domain.Entities.Account;
 using PaginationMetadata =  SimpleBankAPI.Domain.Entities.PaginationMetadata;
 

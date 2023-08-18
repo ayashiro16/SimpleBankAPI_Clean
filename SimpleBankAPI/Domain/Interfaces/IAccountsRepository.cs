@@ -7,7 +7,7 @@ namespace SimpleBankAPI.Domain.Interfaces;
 public interface IAccountsRepository
 {
     ValueTask<Account?> Get(Guid id);
-    (List<Account>, PaginationMetadata) GetAll(GetAccountsQuery query);
+    (IEnumerable<Account>, PaginationMetadata) GetAll(GetAccountsQuery query);
     void Add(Account account);
     void Update(Account account, decimal amount);
 }

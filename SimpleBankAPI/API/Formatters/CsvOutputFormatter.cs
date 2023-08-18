@@ -2,7 +2,6 @@ using System.Collections;
 using System.Text;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Net.Http.Headers;
-using SimpleBankAPI.API.Factories;
 using SimpleBankAPI.API.Formatters.Interfaces;
 using SimpleBankAPI.Application.Interfaces;
 

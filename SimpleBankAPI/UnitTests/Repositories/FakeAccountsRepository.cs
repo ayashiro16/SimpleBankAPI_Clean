@@ -1,8 +1,8 @@
-using SimpleBankAPI.Application.DataTransformationObjects.Requests;
 using SimpleBankAPI.Domain.Entities;
-using SimpleBankAPI.Domain.Interfaces;
+using GetAccountsQuery = SimpleBankAPI.Application.DataTransformationObjects.Requests.GetAccountsQuery;
+using IAccountsRepository = SimpleBankAPI.Domain.Interfaces.IAccountsRepository;
 
-namespace SimpleBankAPI.UnitTests;
+namespace SimpleBankAPI.UnitTests.Repositories;
 
 public class FakeAccountsRepository : IAccountsRepository
 {
@@ -38,7 +38,7 @@ public class FakeAccountsRepository : IAccountsRepository
         return new ValueTask<Account?>(_fakeAccountsContext.FirstOrDefault(user => user.Id == id));
     }
 
-    public (List<Account>, PaginationMetadata) GetAll(GetAccountsQuery query)
+    public (IEnumerable<Account>, PaginationMetadata) GetAll(GetAccountsQuery query)
     {
         return (_fakeAccountsContext, new PaginationMetadata(_fakeAccountsContext.Count, query.PageSize, query.CurrentPage));
     }
